@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+}
+body{
+    overflow: hidden;
+    margin: 0px;
+}
+#div{
+    width: 100%;
+    height: 500000px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+}
+
+#mainlabel{
+border: solid 5px;
+    width: 50%;
+    height: 100px;
+    display: flex;
+    border-radius:10000px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    overflow: hidden;
+    background-color: white;
+}
+input{
+    display: none;
+}
+#light{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    left: 5%;
+    color: white;
+    font-size: 150%;
+}
+#dark{
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    left: 40%;
+        font-size: 150%;
+
+}
+#cirk{
+    position: absolute;
+    background-color: black;
+    width: 20%;
+    height: 10%;
+    border-radius: 10000px;
+    z-index: 0;
+    transition-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+#darkpic{
+    width: 40%;
+    position: absolute;
+    margin-left: 10%;
+    translate: 0 130%;
+}
+#litepic{
+    width: 40%;
+    position: absolute;
+    margin-left: 50%;
+}
+input:checked~#div{
+    background-color: black;
+}
+input:checked~div #mainlabel{
+    border-color: white;
+    background-color: black;
+}
+
+input:checked~div label #cirk{
+    margin-left: 25%;
+    width: 20%;
+    background-color: white;
+}
+input:checked~div label #cirk #litepic{
+    translate: 0 130%;
+}input:checked~div label #cirk #darkpic{
+    translate: 0 0;
+}
